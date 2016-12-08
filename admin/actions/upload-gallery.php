@@ -1,5 +1,5 @@
 <?php
-defined('included') or die('Brak dostępu!');
+  
 if ($_FILES['galleryimg']['name'][0]) {
     for ($i = 0; $i < count($_FILES['galleryimg']['name']); $i++) {
         $error_gallery = "";

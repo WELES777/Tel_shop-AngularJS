@@ -1,5 +1,5 @@
 <?php
-defined('included') or die('Brak dostępu!');
+  
 $error_img = array();
 if ($_FILES['upload_image']['error'] > 0) {
     switch ($_FILES['upload_image']['error']) {

@@ -1,5 +1,5 @@
 <?php
-defined('included') or die('Brak dostępu!');
+  
 if ($_SESSION['auth'] != 'yes_auth' && $_COOKIE["rememberme"]) {
 
     $str = $_COOKIE["rememberme"];

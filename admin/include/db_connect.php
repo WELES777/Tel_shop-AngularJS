@@ -1,5 +1,5 @@
 <?php
-defined('included') or die('Brak dostępu!');
+  
 $db_host     = 'localhost';
 $db_user     = 'weles_user';
 $db_pass     = '1234';

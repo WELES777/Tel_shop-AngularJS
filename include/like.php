@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    define('included', true);
+      
     session_start();
     if ($_SESSION['likeid'] != (int) $_POST["id"]) {
         include "db_connect.php";

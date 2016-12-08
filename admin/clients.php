@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['auth_admin'] == "yes_auth") {
-    define('included', true);
+      
     if (isset($_GET["logout"])) {
         unset($_SESSION['auth_admin']);
         header("Location: login.php");

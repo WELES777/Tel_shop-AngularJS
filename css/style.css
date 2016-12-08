@@ -1,11 +1,12 @@
 html{
     z-index:0;
     background: url(/images/pat_try.jpg);
+    /*overflow-x: hidden;*/
 }
 #block-body{
     width: 1040px;
     height:  auto;
-    margin: 0 auto;
+    margin: -20px auto;
     z-index:1;
     background: white;
    padding: 10px;
@@ -15,7 +16,7 @@ html{
     height: 240px;
 }
 #block-right{
-    width: 220px;
+    width: 205px;
     height: auto;
     float: right;
 }
@@ -37,9 +38,9 @@ html{
 #block-footer{
     z-index: 2;
     width: 1035px;
-    height: 160px;
-    margin-top: 40px;
-    padding:0 12px;
+    height: 147px;
+    margin-top: 50px;
+    padding:6 12px;
     margin-left: -10px;
     clear: both;
     background: url(/images/grd-footer.png) ;
@@ -151,32 +152,21 @@ html{
     z-index: 999;
     position: absolute;   
 }
-#block-search span{
-    width: 13px;
-    height: 13px;
-    background: url(/images/icon-search.png);
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 6px;            
+#block-search .form-control {
+    display: inline-block;
+    width: 60px;
+    float: left;
+    padding:0px;
+    padding-left: 10px;
 }
-#block-search input#input-search{
-    width: 250px;
-    height: 26px;
-    border: 1px solid #E1E1E2;
-    font: 14px sans-serif;
-    padding-left: 25px;
+#block-search input.form-control{
+    width: 80%;
+
 }
-#button-search{
-    width: 68px;
-    height: 30px;
-    border: 1px solid #E1E1E2;
-    background: url(/images/grd-button-search-norm.png);  
-    margin-left: -5px;
-    cursor: pointer;
+#block-search div.form-control{
+    display: inline;
 }
-#button-search:hover{
-    background: url(/images/grd-button-search-hover.png);  
-}
+
 #top-menu{
     width: 1033px;
     height: 45px;
@@ -187,15 +177,16 @@ html{
     margin-left: 10px;
     margin-top: 8px;
 }
-#top-menu a{
+#top-menu span{
     font: 15px sans-serif;
     color: #34659D;
+    cursor: pointer;
     margin-left: 4px;
     margin-right: 3px;
     text-decoration: none;
     border-bottom: 1px dashed #34659D;
 }
-#top-menu a:hover{
+#top-menu span:hover{
     color:#EF662B;
     border-bottom: 1px dashed #EF662B;
 }
@@ -242,7 +233,7 @@ html{
     margin-top: -5px;
 }
 .header-title{
-    width: 210px;
+    width: 225px;
     font: 14px sans-serif;
     margin-top: 0px;
     padding-left: 20px;
@@ -294,12 +285,13 @@ html{
 .category-section li{
     margin-top: 3px;
 }
-.category-section a{
+.category-section span{
     font: 15px sans-serif;
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
-.category-section a:hover{
+.category-section span:hover{
     text-decoration: underline;
 }
 #block-parameter{
@@ -309,7 +301,7 @@ html{
 }
 .title-filter{
     font: bold 14px sans-serif;
-    margin-top: 0px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 #block-input-price li{
@@ -364,6 +356,18 @@ html{
     height: auto;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.table-striped > tbody > tr > td {
+    vertical-align: middle;
+    overflow: hidden;
+   
+}
+.newsize{
+    width:200px;
+}
+.newsize2{
+     width:40px;
 }
 #newsticker{
     width: 220px;
@@ -579,7 +583,7 @@ html{
     height: auto;
 }
 #block-towar-list{
-    display: none;
+   /* display: none;*/
 }
 #block-towar-list > li{
     border-bottom: 1px solid #E6E6E6;
@@ -589,7 +593,7 @@ html{
     padding-bottom: 5px;
 }
 .reviews-and-counts-list{
-    position: absolute;
+    /*position: absolute;*/
     margin-left: 670px;
 }
 .reviews-and-counts-list > li{
@@ -730,6 +734,7 @@ html{
     color: black;
     cursor: pointer;
     margin-left: 5px;
+   
 }
 #genpass:hover{
     text-decoration: none;
@@ -748,7 +753,12 @@ html{
     border-right:1px solid #DDDDDD ;
     border-bottom:1px solid #DDDDDD ;
 }
-
+#form-registration p{
+    margin-left: 200px;
+}
+input#reg_pass{
+    display: inline-block;
+}
 #form-registration > li > input:focus,
 #form-registration > li > input#reg_login:focus,
 #form-registration > li > input#reg_pass:focus,
@@ -825,13 +835,13 @@ html{
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
-    display: none;
+    display: block;
 }
 #block-top-auth{
     border: 1px solid #DBDBDB;
     width: 210px;
     height: auto;
-    margin-left: 719px;
+    margin-left: 750px;
     margin-top: 40px;
     background-color: white;
     position: absolute;
@@ -850,7 +860,7 @@ html{
 }
 #input-email-pass h3{
     font: 15px sans-serif;
-    margin: 10px;
+    margin: 15px;
 }
 #message-auth{
     font: bold 13px sans-serif;
@@ -891,49 +901,57 @@ html{
     width: 25px;
     height: 25px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 7px;
     position: absolute;
     margin-left: -28px;
+}
+#input-email-pass p{
+    margin-top: 0;
+    margin-left: 20px;
 }
 #list-auth{
     margin-top: 12px;
 }
 #list-auth li{
     margin-top: 5px;
-    margin-left: 10px;
+    margin-left: 8px;
     font: 14px sans-serif;
 }
 #list-auth a{
+    font-size: 13px;
     color: black;
     text-decoration: none;
-    margin-left: 3px;
+    margin-left: 11px;
     border-bottom: 1px dashed black;
+}
+#list-auth label{
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+#list-auth input[type="checkbox"]{
+    margin-left: 9px;
 }
 #list-auth a:hover{
     border-bottom: none;
 }
+#button-auth{
+    margin: 0px 120px;
 
+}
 #button-auth a,#button-remind a{
-    margin-right: 10px;
-    cursor: pointer;
-    background: url(/images/button-grd.png) repeat-x;
     font:bold 13px sans-serif;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 1px solid #E8E8E8;
-    border-radius:5px ; 
-   -webkit-border-radius:5px ; 
-   -moz-border-radius:5px ;  
+    color:white;
+    text-decoration:none;
+
+}
+#button-remind{
+    margin-top: 15px;
+    padding: 4px;
+    margin-left: 7px;
+    margin-bottom: 5px;
 }
 
-#button-auth a:hover,#button-remind a:hover{
-    background: url(/images/button-grd-hover.png) repeat-x;
-}
-#button-auth a:active,#button-remind a:active{
-    background: url(/images/button-grd-active.png) repeat-x;
-}
+
 .auth-loading{
     margin-right: 30px;
     margin-top: 20px;
@@ -973,18 +991,20 @@ html{
     padding-left: 5px;
     padding-right: 30px;
 }
-
-#block-remind  p#prev-auth{
+#block-remind{
+    height: auto;
+}
+#block-remind  button#prev-auth{
     font:bold 13px sans-serif;
-    text-decoration: underline;
-    width: 10px; 
-    margin-left: 10px;
-    margin-top: -32px;
+   
+   text-decoration: none;
+    margin-left: 70px;
+    margin-top: 15px;
     cursor: pointer;
     position: absolute;  
 }
-#block-remind  p#prev-auth:hover{
-    text-decoration: none;
+#block-remind p{
+
 }
 .message-remind-error{
     display: none;

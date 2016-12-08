@@ -1,42 +1,40 @@
-<?php
-	defined('included') or die('Brak dostępu!');
-?>
 <div id="block-news">
 
-<center><img id="news-prev" src="/images/img-prev.png" /></center>
+	<center><img id="news-prev" src="/images/img-prev.png" /></center>
 
 
-<div id="newsticker">
-<ul>
+	<div id="newsticker">
+		<ul>
 
 
-<?php
-	 $result = mysqli_query($link, "SELECT * FROM news ORDER BY id DESC");
-If (mysqli_num_rows($result) > 0)
-{
-$row = mysqli_fetch_array($result);
- do
-{	
+			<?php
+			$result = mysqli_query($link, "SELECT * FROM news ORDER BY id DESC");
+			If (mysqli_num_rows($result) > 0)
+			{
+				$row = mysqli_fetch_array($result);
+				do
+				{	
 
-echo '
-<li>
-<span>'.$row["date"].'</span>
-<a href="" >'.$row["title"].'</a>
-<p>'.$row["text"].'</p>
-</li>
+					echo '
+					<li>
+						<span>'.$row["date"].'</span>
+						<a href="" >'.$row["title"].'</a>
+						<p>'.$row["text"].'</p>
+					</li>
 
-';
+					';
 
-}
- while ($row = mysqli_fetch_array($result)); 
-} 
-?>
+				}
+				while ($row = mysqli_fetch_array($result)); 
+			} 
+			?>
 
 
-</ul>
+		</ul>
 
-</div>
-<center><img id="news-next" src="/images/img-next.png" /></center>
+	</div>
+	<center><img id="news-next" src="/images/img-next.png" /></center>
+	
 
 
 

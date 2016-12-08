@@ -1,6 +1,6 @@
 <?php
 session_start();
-define('included', true);
+  
 include "include/db_connect.php";
 include "include/functions.php";
 if ($_POST["submit_enter"]) {

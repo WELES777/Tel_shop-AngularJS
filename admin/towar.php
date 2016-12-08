@@ -1,6 +1,6 @@
 <?php
 session_start();
-define('included', true);
+  
 if ($_SESSION['auth_admin'] == "yes_auth") {
     if (isset($_GET["logout"])) {
         unset($_SESSION['auth_admin']);

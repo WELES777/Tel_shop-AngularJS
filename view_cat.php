@@ -1,5 +1,5 @@
 <?php
-define('included', true);
+  
 include "include/db_connect.php";
 include "functions/functions.php";
 session_start();
@@ -42,15 +42,17 @@ switch ($sorting) {
 }
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+<!DOCTYPE html>
+<html lang="pl" ng-app='myApp'>
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=iso-8859-2" />
   <link href="css/reset.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> 
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <link href="trackbar/trackbar.css" rel="stylesheet" type="text/css" />
 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
   <script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
   <script type="text/javascript" src="/js/jcarousellite_1.0.1.js"></script>
   <script type="text/javascript" src="/js/shop-script.js"></script>
@@ -60,7 +62,7 @@ switch ($sorting) {
 
   <title>Sklep internetowy sprzętu telekomunikacyjnego</title>
 </head>
-<body>
+<body ng-controller="ProductController">
 
   <div id="block-body">
     <?php
@@ -200,8 +202,6 @@ switch ($sorting) {
 
         ?>
       </ul>
-
-
       <ul id="block-towar-list" >
 
         <?php
@@ -257,7 +257,7 @@ switch ($sorting) {
           } while ($row = mysqli_fetch_array($result));
         }
       } else {
-        echo '<h3>Kategoria nie jest dostępna lub nie stworzona!</3>';
+        echo '<h3>Kategoria nie jest dostępna lub nie stworzona!</h3>';
       }
 
       echo '</ul>';

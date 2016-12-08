@@ -1,18 +1,18 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-define('included', true);    
-include("db_connect.php");
-include("../functions/functions.php");
+  
+  include("db_connect.php");
+  include("../functions/functions.php");
 
-$email = clear_string($link,$_POST["email"]);
+  $email = clear_string($link,$_POST["email"]);
 
-if ($email != "")
-{
+  if ($email != "")
+  {
     
    $result = mysqli_query($link, "SELECT email FROM reg_user WHERE email='$email'");
-If (mysqli_num_rows($result) > 0)
-{
+   If (mysqli_num_rows($result) > 0)
+   {
     
 
     $newpass = fungenpass();
@@ -22,27 +22,27 @@ If (mysqli_num_rows($result) > 0)
     $pass   = strrev($pass);
     $pass   = strtolower("9nm2rv8q".$pass."2yo6z");    
 
-$update = mysqli_query ("UPDATE reg_user SET pass='$pass' WHERE email='$email'");
+    $update = mysqli_query ("UPDATE reg_user SET pass='$pass' WHERE email='$email'");
 
     
 
-   
-	         send_mail( 'vasia.wendetta@gmail.com',
-			             $email,
-						'Nowe hasło dla strony pm_shop.pl',
-						'Wasze hasło: '.$newpass);   
-   
-   echo 'yes';
     
-}else
-{
+    send_mail( 'vasia.wendetta@gmail.com',
+      $email,
+      'Nowe hasło dla strony pm_shop.pl',
+      'Wasze hasło: '.$newpass);   
+    
+    echo 'yes';
+    
+  }else
+  {
     echo 'Nie prawidłowy email!';
-}
+  }
 
 }
 else
 {
-    echo 'Podaj swój email';
+  echo 'Podaj swój email';
 }
 
 }

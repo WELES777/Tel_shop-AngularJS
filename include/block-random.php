@@ -1,5 +1,5 @@
 <?php
-defined('included') or die('Brak dostępu!');
+  
 ?>
 <div id="block-random-tovar">
 <ul>

@@ -1,5 +1,5 @@
 <?php
-define('included', true);
+  
 include "include/db_connect.php";
 include "functions/functions.php";
 session_start();
@@ -25,8 +25,8 @@ if ($id != $_SESSION['countid']) {
 $_SESSION['countid'] = $id;
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+<!DOCTYPE html>
+<html lang="pl" ng-app='myApp'>
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=iso-8859-2" />
@@ -35,9 +35,10 @@ $_SESSION['countid'] = $id;
   <meta name="keywords" content="<?php echo $resquery["seo_words"]; ?>" />
 
   <link href="css/reset.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> 
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <link href="trackbar/trackbar.css" rel="stylesheet" type="text/css" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
   <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
   <script type="text/javascript" src="js/jcarousellite_1.0.1.js"></script>
   <script type="text/javascript" src="js/shop-script.js"></script>
@@ -62,7 +63,7 @@ $_SESSION['countid'] = $id;
     });
 </script>
 </head>
-<body>
+<body ng-controller="  ProductController"> 
     <div id="block-body">
         <?php
         include "include/block-header.php";

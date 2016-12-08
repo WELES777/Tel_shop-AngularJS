@@ -1,5 +1,5 @@
 <?php
-defined('included') or die('Brak dostępu!');
+  
 $result1 = mysqli_query($link, "SELECT * FROM orders WHERE order_confirmed='no'");
 $count1  = mysqli_num_rows($result1);
 if ($count1 > 0) {$count_str1 = '<p>+' . $count1 . '</p>';} else { $count_str1 = '';}
